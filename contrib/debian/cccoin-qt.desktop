@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CCCoin
+Comment=CCCoin P2P Cryptocurrency
+Comment[fr]=CCCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=CCCoin, eşten eşe kriptografik sanal para birimi
+Exec=cccoin-qt %u
+Terminal=false
+Type=Application
+Icon=cccoin128
+MimeType=x-scheme-handler/cccoin;
+Categories=Office;Finance;

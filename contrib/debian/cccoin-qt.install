@@ -1,0 +1,6 @@
+usr/local/bin/cccoin-qt usr/bin
+share/pixmaps/bitcoin32.xpm usr/share/pixmaps
+share/pixmaps/bitcoin16.xpm usr/share/pixmaps
+share/pixmaps/bitcoin128.png usr/share/pixmaps
+debian/cccoin-qt.desktop usr/share/applications
+debian/cccoin-qt.protocol usr/share/kde4/services/

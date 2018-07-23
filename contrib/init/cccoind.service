@@ -1,0 +1,26 @@
+[Unit]
+Description=CCCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=cccoin
+Group=cccoin
+
+Type=forking
+PIDFile=/var/lib/cccoind/cccoind.pid
+
+ExecStart=/usr/bin/cccoind -daemon -pid=/var/lib/cccoind/cccoind.pid \
+          -conf=/etc/cccoin/cccoin.conf -datadir=/var/lib/cccoind
+
+ExecStop=-/usr/bin/cccoin-cli -conf=/etc/cccoin/cccoin.conf \
+         -datadir=/var/lib/cccoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
